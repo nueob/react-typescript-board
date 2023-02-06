@@ -12,7 +12,7 @@ const PostList = ({ posts }: any) => {
           id={post.id}
           className="usPost usBorder"
         >
-          {post.title}
+          <span>{post.title}</span>
         </div>
       ))}
     </div>

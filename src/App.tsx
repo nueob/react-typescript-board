@@ -8,6 +8,9 @@ import PostList from './components/PostList';
 function App() {
   return (
     <div className="App">
+      <div className="usEmoji">
+        <span>👩‍💻 개발 블로그</span>
+      </div>
       <PostList posts={posts}/>
     </div>
   );
