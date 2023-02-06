@@ -1,0 +1,14 @@
+.usPostList {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.usPost {
+    display: flex;
+    margin: 12px;
+    padding: 12px;
+}
+
+.usPostTitle {
+    flex-basis: 35%;        
+}
