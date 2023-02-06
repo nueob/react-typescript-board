@@ -1,5 +1,5 @@
 import React from "react"
-import "./PostList.css";
+import "../styles/PostList.css";
 
 import Post from "../interfaces/Post"
 
