@@ -2,8 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import * as S from './styles/App';
 
-import posts from './assets/posts.json';
-import PostList from './components/PostList';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
@@ -16,7 +15,7 @@ function App() {
             </S.Span>
           </div>
         </S.Emoji>
-        <PostList posts={posts}/>
+        <Navbar />
       </div>
     </S.AppContainer>
   );

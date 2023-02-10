@@ -2,10 +2,12 @@ import React from "react"
 import Post from "../interfaces/Post"
 import * as S from "../styles/PostList";
 
-const PostList = ({ posts }: any) => {
+import posts from '../assets/posts.json';
+
+const PostList = () => {
   return (
     <S.PostList>
-        {posts.map((post: Post) => (
+        {posts && posts.map((post: Post) => (
           <S.Post
             key={post.id}
             id={post.id}
