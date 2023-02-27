@@ -1,21 +1,20 @@
 import React from "react"
-import "../styles/PostList.css";
-
 import Post from "../interfaces/Post"
+import * as S from "../styles/PostList";
 
 const PostList = ({ posts }: any) => {
   return (
-    <div>
-      {posts.map((post: Post) => (
-        <div
-          key={post.id}
-          id={post.id}
-          className="usPost usBorder"
-        >
-          <span>{post.title}</span>
-        </div>
-      ))}
-    </div>
+    <S.PostList>
+        {posts.map((post: Post) => (
+          <S.Post
+            key={post.id}
+            id={post.id}
+            className="usPost usBorder"
+          >
+            <span>{post.title}</span>
+          </S.Post>
+        ))}
+    </S.PostList>
   )
 }
 
