@@ -1,15 +1,11 @@
-import {Link} from 'react-router-dom';
+import * as S from '../styles/Navbar';
 
 const Navbar = () => {
   return (
-    <nav>
-      <div>
-        <Link to="/">홈</Link>
-      </div>
-      <div>
-        <Link to="/test">테스트</Link>
-      </div>
-    </nav>
+    <S.Navbar>
+      <S.StyledLink to="/">홈</S.StyledLink>
+      <S.StyledLink to="/test">테스트</S.StyledLink>
+    </S.Navbar>
   )
 }
 
