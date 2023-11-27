@@ -1,23 +1,15 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import router from '../router';
+import {Link} from 'react-router-dom';
 
 const Navbar = () => {
   return (
-    <Router>
-      <Routes>
-        {
-          router.map((route, i) => {
-              return (
-                  <Route
-                      key={i}
-                      path={route.path}
-                      element={<route.component />}
-                  />
-              );
-          })
-        }
-      </Routes>
-    </Router>
+    <nav>
+      <div>
+        <Link to="/">홈</Link>
+      </div>
+      <div>
+        <Link to="/test">테스트</Link>
+      </div>
+    </nav>
   )
 }
 
