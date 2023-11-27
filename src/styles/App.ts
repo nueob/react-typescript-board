@@ -4,10 +4,9 @@ export const AppContainer = styled.div`
   background-color: #f7f5f7;
 `;
 
-// export const Body = styled.div`
-//   position: relative;
-//   padding: calc((100vh - 263px) / 2) 0;
-// `;
+export const Body = styled.div`
+  padding: 0 40px;
+`;
 
 export const Emoji = styled.div`
   width: 211px;

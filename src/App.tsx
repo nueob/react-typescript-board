@@ -3,6 +3,7 @@ import {Routes, Route} from 'react-router-dom';
 import * as S from './styles/App';
 
 import Test from './components/Test';
+import Home from './components/Home';
 import PostList from './components/PostList';
 import Navbar from './components/Navbar';
 
@@ -15,12 +16,13 @@ function App() {
         </S.Emoji>
         <Navbar />
       </S.Head>
-      <div className='body'>
+      <S.Body>
         <Routes>
-          <Route path='/' element={<PostList />}></Route>
+          <Route path='/' element={<Home />}></Route>
+          <Route path='/post' element={<PostList />}></Route>
           <Route path='/test' element={<Test />}></Route>
         </Routes>
-      </div>
+      </S.Body>
     </S.AppContainer>
   );
 }
