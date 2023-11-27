@@ -9,16 +9,18 @@ import Navbar from './components/Navbar';
 function App() {
   return (
     <S.AppContainer>
-      <Navbar />
-      <S.Emoji>
-        <S.Span>
-          <span>👩‍💻 개발 블로그</span>
-        </S.Span>
-      </S.Emoji>
-      <Routes>
-        <Route path='/' element={<PostList />}></Route>
-        <Route path='/test' element={<Test />}></Route>
-      </Routes>
+      <S.Head>
+        <S.Emoji>
+          <S.H2>👩‍💻 개발 블로그</S.H2>
+        </S.Emoji>
+        <Navbar />
+      </S.Head>
+      <div className='body'>
+        <Routes>
+          <Route path='/' element={<PostList />}></Route>
+          <Route path='/test' element={<Test />}></Route>
+        </Routes>
+      </div>
     </S.AppContainer>
   );
 }
