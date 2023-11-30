@@ -3,6 +3,8 @@ import {Link} from 'react-router-dom';
 
 export const Navbar = styled.nav`
     display: flex;
+    width: 211px;
+    margin: 0 auto 10px;
 `
 
 export const StyledLink = styled(Link)`

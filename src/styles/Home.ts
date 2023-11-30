@@ -66,5 +66,5 @@ export const Notifiation = styled.div`
 
 export const Line = styled.div`
     border-top: 1px solid #dfe0e5;
-    margin: 10px 0px;
+    margin: 18px 0px;
 `
