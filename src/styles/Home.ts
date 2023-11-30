@@ -40,7 +40,7 @@ export const StackLogo = styled.img`
     }
 `;
   
-export const TableContainer = styled.table`
+export const TableContainer = styled.div`
     width: 100%;
     padding: 5px;
     margin: 10px;
@@ -49,15 +49,20 @@ export const TableContainer = styled.table`
     border-radius: 3px;
     border-spacing: 0px 5px;
 
-    tr {
+    li {
+        list-style: none;
         cursor: pointer;
 
-        &:hover {
-            background: lightblue;
-            font-weight: bold;
+        &:first-of-type {
+            margin-bottom: 8px;
         }
     }
 `
+
+export const Career = styled.span<{ isSelectCareer: boolean }>`
+    background: ${({isSelectCareer}) => (isSelectCareer ? 'lightblue' : 'transparent')};
+    font-weight: ${({isSelectCareer}) => (isSelectCareer ? 'bold' : 'normal')};
+`;
 
 export const Notifiation = styled.div`
     text-align: center;

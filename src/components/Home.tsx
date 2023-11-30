@@ -1,7 +1,17 @@
-import mainImage from '../assets/mainImage.jpg';
 import * as S from '../styles/Home';
+import {useState} from "react";
+
+import mainImage from '../assets/mainImage.jpg';
 
 const PostList = () => {
+  const careerList = [
+    {key: 'vinulabs', value: '2022.01 - ing Vinulabs, Softdeveloper'},
+    {key: 'intoCNS', value: '2021.03 - 2021.08 IntoCNS , Intern'}
+  ];
+
+  const [career, setCareer] = useState<string>('vinulabs');
+  const handleSelect = (value: string) => setCareer(value);
+
   return (
     <>
       <S.ProfileContainer>
@@ -21,16 +31,18 @@ const PostList = () => {
           <S.Line></S.Line>
           <S.Wrapper>🤸 Career</S.Wrapper>
           <S.TableContainer>
-            <tbody>
-              <tr>
-                <td>2021.03 - 2021.08</td>
-                <td>IntoCNS , Intern</td>
-              </tr>
-              <tr>
-                <td>2022.01 - ing</td>
-                <td>Vinulabs, Softdeveloper</td>
-              </tr>
-            </tbody>
+            {
+              careerList.map(({key, value}) => (
+                <li
+                  key={key}
+                  onClick={() => handleSelect(key)}
+                >
+                  <S.Career isSelectCareer={career === key}>
+                    {value}
+                  </S.Career>
+                </li>
+              ))
+            }
           </S.TableContainer>
           <S.Notifiation>👆 항목을 눌러 확인해주세요!</S.Notifiation>
         </S.IntroduceContainer>
