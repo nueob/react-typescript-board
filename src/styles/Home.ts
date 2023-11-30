@@ -73,3 +73,39 @@ export const Line = styled.div`
     border-top: 1px solid #dfe0e5;
     margin: 18px 0px;
 `
+
+export const PostContainer = styled.div`
+    width: 800px;
+    margin: 50px auto 0;
+`;
+
+export const PostRow = styled.div`
+    margin-left: 20px;
+`
+
+export const rowHeader = styled.div`
+    display: flex;
+    align-items: end;
+`
+export const rowBody = styled.div`
+    margin: 10px 0 0 30px;
+    line-height: 24px;
+`
+
+export const Toggle = styled.div<{ isOpen: boolean }>`
+    margin: 0 6px 2px 0;
+    width: 0;
+    height: 0;
+    border-top: 6px solid black;
+    border-left: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-right: 6px solid transparent;
+    cursor: pointer;
+    ${({isOpen}) => (isOpen ? 'transform: rotate(180deg);' : '')}
+    ${({isOpen}) => (isOpen ? 'margin-bottom: 8px;' : '')}
+`
+
+export const ToggleTitle = styled.div`
+    margin-left: 10px;
+    background: lightgray;
+`

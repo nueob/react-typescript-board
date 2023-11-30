@@ -12,6 +12,16 @@ const PostList = () => {
   const [career, setCareer] = useState<string>('vinulabs');
   const handleSelect = (value: string) => setCareer(value);
 
+  const [toggle, setToggle] = useState<{ [key: string]: boolean }>({
+    language: false
+  });
+  const handleToggle = (key: string) => {
+    setToggle((originToggle) => ({
+      ...originToggle,
+      [key]: !originToggle[key]
+    }));
+  }
+  
   return (
     <>
       <S.ProfileContainer>
@@ -47,6 +57,28 @@ const PostList = () => {
           <S.Notifiation>👆 항목을 눌러 확인해주세요!</S.Notifiation>
         </S.IntroduceContainer>
       </S.ProfileContainer>
+      {
+        career === 'intoCNS' &&
+          <S.PostContainer>
+            <h2>🐶 Intopet</h2>
+            <S.PostRow>
+              <S.rowHeader>
+                <S.Toggle isOpen={toggle['language']} onClick={() => handleToggle('language')}></S.Toggle>
+                <S.ToggleTitle>개발 환경 및 언어</S.ToggleTitle>
+              </S.rowHeader>
+              {
+                toggle['language'] && 
+                  <S.rowBody>
+                    Codeigniter 4 , PHP <br/>
+                    VueJS <br/>
+                    MySQL , DBeaver <br/>
+                    Docker <br/>
+                    Git , Zeplin <br/>
+                  </S.rowBody>
+              }
+            </S.PostRow>
+          </S.PostContainer>
+      }
     </>
   )
 }
