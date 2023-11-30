@@ -19,6 +19,20 @@ const PostList = () => {
             <S.StackLogo src="https://img.shields.io/badge/JavaScript-yellow?style=flat-square&logo=JavaScript&logoColor=white" alt="JavaScript"/>
           </S.StackLogoContainer>
           <S.Line></S.Line>
+          <S.Wrapper>🤸 Career</S.Wrapper>
+          <S.TableContainer>
+            <tbody>
+              <tr>
+                <td>2021.03 - 2021.08</td>
+                <td>IntoCNS , Intern</td>
+              </tr>
+              <tr>
+                <td>2022.01 - ing</td>
+                <td>Vinulabs, Softdeveloper</td>
+              </tr>
+            </tbody>
+          </S.TableContainer>
+          <S.Notifiation>👆 항목을 눌러 확인해주세요!</S.Notifiation>
         </S.IntroduceContainer>
       </S.ProfileContainer>
     </>

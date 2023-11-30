@@ -39,6 +39,30 @@ export const StackLogo = styled.img`
         margin-left: 0;
     }
 `;
+  
+export const TableContainer = styled.table`
+    width: 100%;
+    padding: 5px;
+    margin: 10px;
+    font-size: 13px;
+    border: 1px solid darkgray;
+    border-radius: 3px;
+    border-spacing: 0px 5px;
+
+    tr {
+        cursor: pointer;
+
+        &:hover {
+            background: lightblue;
+            font-weight: bold;
+        }
+    }
+`
+
+export const Notifiation = styled.div`
+    text-align: center;
+    font-weight: 550;
+`
 
 export const Line = styled.div`
     border-top: 1px solid #dfe0e5;
