@@ -3,11 +3,11 @@ import { lazy } from 'react';
 const router = [
 	{
 		path: '/',
-		component: lazy(() => import('./components/PostList'))
+		component: lazy(() => import('./pages/PostList'))
 	},
 	{
 		path: '/test',
-		component: lazy(() => import('./components/Test'))
+		component: lazy(() => import('./pages/Test'))
 	}
 ];
 

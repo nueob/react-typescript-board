@@ -10,11 +10,12 @@ const PostList = () => {
   ];
 
   const [career, setCareer] = useState<string>('vinulabs');
-  const handleSelect = (value: string) => setCareer(value);
-
+  // toggle object를 계속 업데이트 해줘야하니까 
   const [toggle, setToggle] = useState<{ [key: string]: boolean }>({
     language: false
   });
+
+  const handleSelect = (value: string) => setCareer(value);
   const handleToggle = (key: string) => {
     setToggle((originToggle) => ({
       ...originToggle,

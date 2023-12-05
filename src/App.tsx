@@ -2,10 +2,10 @@ import React from 'react';
 import {Routes, Route} from 'react-router-dom';
 import * as S from './styles/App';
 
-import Test from './components/Test';
-import Home from './components/Home';
-import PostList from './components/PostList';
-import Navbar from './components/Navbar';
+import Test from './pages/Test';
+import Home from './pages/Home';
+import PostList from './pages/PostList';
+import Navbar from './pages/Navbar';
 
 function App() {
   return (
