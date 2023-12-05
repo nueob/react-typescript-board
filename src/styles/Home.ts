@@ -60,8 +60,7 @@ export const TableContainer = styled.div`
 `
 
 export const Career = styled.span<{ isSelectCareer: boolean }>`
-    background: ${({isSelectCareer}) => (isSelectCareer ? 'lightblue' : 'transparent')};
-    font-weight: ${({isSelectCareer}) => (isSelectCareer ? 'bold' : 'normal')};
+    ${({isSelectCareer}) => (isSelectCareer ? 'background: lightblue;font-weight: bold;' : '')}
 `;
 
 export const Notifiation = styled.div`
@@ -101,8 +100,7 @@ export const Toggle = styled.div<{ isOpen: boolean }>`
     border-bottom: 6px solid transparent;
     border-right: 6px solid transparent;
     cursor: pointer;
-    ${({isOpen}) => (isOpen ? 'transform: rotate(180deg);' : '')}
-    ${({isOpen}) => (isOpen ? 'margin-bottom: 8px;' : '')}
+    ${({isOpen}) => (isOpen ? 'transform: rotate(180deg);margin-bottom: 8px;' : '')}
 `
 
 export const ToggleTitle = styled.div`
